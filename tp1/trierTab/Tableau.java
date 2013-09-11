@@ -1,17 +1,18 @@
 public class Tableau {
  
     public static void main(String[] args) {
-        int[] tab = {15, 45, 0, 524, 82, 1, 256};
-        trierInt(tab);
-        printInt(tab);
+        int[] tab = {10, -5, 12, 7};
+
+        trierInt(tab, 4);
+        afficherInt(tab);
     }
  
-    public static int[] trierInt(int[] tab) {
+    public static int[] trierInt(int[] tab, int length) {
          
         int tmp = 0;
          
-        for(int i = 0; i < tab.length; i++) {
-            for(int j = i; j < tab.length; j++) {
+        for(int i = 0; i < length; i++) {
+            for(int j = i; j < length; j++) {
                 if(tab[j] < tab[i]) {
                     tmp = tab[i];
                     tab[i] = tab[j];

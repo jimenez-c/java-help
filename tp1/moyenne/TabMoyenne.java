@@ -2,15 +2,15 @@ public class TabMoyenne {
 	public static void main(String[] args) {
 		double[] tab = new double[50];
 		int length = 0;
-		int continuer = 1;
+		double tmp = 1;
 		
-		while(continuer == 1) {
-			System.out.println("Saisir un chiffre");
-			tab[length] = Lecture.lireDouble();
-			length++;
-			
-			System.out.println("Continuer ?");
-			continuer = Lecture.lireInt();
+		while(tmp > 0) {
+			if(tmp > 0) {
+				System.out.println("Saisir un chiffre");			
+				tmp = Lecture.lireDouble();
+				tab[length] = tmp;
+				length++;
+			} 			
 		}
 		
 		double moyenne;
@@ -24,9 +24,9 @@ public class TabMoyenne {
 		moyenne = somme / length;
 		System.out.println("La moyenne de tout ce que vous avez rentré est " + moyenne);
 		
-		double mini = 200;
+		double mini = 0;
 		for(int i=0; i < length; i++) {
-			if(tab[i] < mini) {
+			if(tab[i] < mini || i == 0) {
 				mini = tab[i];
 			}
 		}
