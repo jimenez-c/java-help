@@ -1,7 +1,8 @@
 public class TrierTab {
+
 	public static void main(String[] args) {
+		
 		int[] tab = {15, 45, 0, 524, 82, 1, 256};
-	
 		int tmp = 0;
 		
 		for(int i = 0; i < tab.length; i++) {
@@ -12,5 +13,10 @@ public class TrierTab {
 					tab[j] = tmp;
 				}
 			}		
+		}
+
+		for (int k = 0; k < tab.length ; k++) {
+			System.out.println(tab[k]);
+		}
 	}
 }
