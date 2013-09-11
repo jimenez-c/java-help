@@ -15,8 +15,15 @@ public class TrierTab {
 			}		
 		}
 
+		System.out.println("Notes de la plus petite à la plus grande: ");
+
 		for (int k = 0; k < tab.length ; k++) {
-			System.out.println(tab[k]);
+			System.out.print(tab[k] + " ");
+
+			if(k == tab.length){
+				System.out.println("\n");
+			}
 		}
+
 	}
 }
